@@ -1,10 +1,13 @@
 import './styles.css'
-import { dropDown } from '../drop-down-btn'
+import { hamburgerChange, reusableBtnFunction } from '../drop-down-btn'
 
 const dropDownFunction = () => {
     const dropDownBtn = document.querySelector(".drop-down-button")
+    reusableBtnFunction()
 
-    dropDownBtn.addEventListener("click", dropDown)
+    dropDownBtn.addEventListener("click", () => {
+        hamburgerChange()
+    })
 }
 
-dropDownFunction()
+document.addEventListener('DOMContentLoaded', dropDownFunction);
